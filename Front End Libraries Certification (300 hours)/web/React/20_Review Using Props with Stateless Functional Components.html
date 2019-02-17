@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            class CampSite extends React.Component {
+                constructor(props) {
+                    super(props);
+                }
+                render() {
+                    return (
+                            <div>
+                <div>
+                <Camper name='Camper' />
+                </div>
+                </div>
+                            );
+                }
+            }
+            ;
+// change code below this line
+            class Camper extends React.Component {
+                constructor(props) {
+                    super(props);
+                }
+                render() {
+                    return (
+                            <p>{this.props.name}</p>
+                            );
+                }
+            }
+            ;
+            Camper.propTypes = {name: PropTypes.string.isRequired};
+            Camper.defaultProps = {name: "CamperBot"};
+        </script>
+    </body>
+</html>
