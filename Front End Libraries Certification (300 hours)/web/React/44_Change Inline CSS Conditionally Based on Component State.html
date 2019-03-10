@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>TODO write content</div>
+
+        <script>
+
+            class GateKeeper extends React.Component {
+                constructor(props) {
+                    super(props);
+                    this.state = {
+                        input: ''
+                    };
+                    this.handleChange = this.handleChange.bind(this);
+                }
+                handleChange(event) {
+                    this.setState({input: event.target.value})
+                }
+                render() {
+                    let inputStyle = {
+                        border: '1px solid black'
+                    };
+                    // change code below this line
+                    this.state.input.length > 15 ?
+                            inputStyle = {border: '3px solid red'}
+                    : inputStyle
+                    // change code above this line
+                    return (
+                            <div>
+                <h3>Don't Type Too Much:</h3>
+                    <input
+                        type="text"
+                    
+                    value={this.state.input}
+                    onChange={this.handleChange} />
+                    </div>
+                            );
+                }
+            }
+            ;
+        </script>
+    </body>
+</html>
